@@ -1,0 +1,31 @@
+// Place all the styles related to the Forms controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.simple_form label {
+ float: left;
+ width: 200px;
+ text-align: center;
+ 
+}
+
+.simple_form div.input {
+ margin-bottom: 20px;
+ width: 650px;
+ text-align: center;
+ 
+}
+
+.simple_form div.radio_buttons {
+float: left;
+margin-bottom: 30px;
+margin: 0 10px 10 60px;
+}
+
+.simple_form div.boolean, .simple_form input[type='submit'] {
+  margin-left: 250px;
+}
+
+.simple_form label.collection_radio {
+  margin-right: 10px;
+  margin-left: 2px;
+}

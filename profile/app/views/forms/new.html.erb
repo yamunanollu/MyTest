@@ -1,0 +1,24 @@
+<%= simple_form_for @form do |f| %>
+<%= f.input :first_name, label: 'First_Name'%>
+<%= f.input :middle_name %>
+<%= f.input :last_name %>
+<%= f.input :gender, :collection => ['Male','Female'], :as => :radio_buttons %>
+<%= f.input :preferred_language %>
+<%= f.input :email %>
+<%= f.input :other_email %>
+<%= f.input :phone %>
+<%= f.input :mobile %>
+<%= f.input :address1 %>
+<%= f.input :address2 %>
+<%= f.input :fax %>
+<%= f.input :rank_id %>
+<%= f.input :city %>
+<%= f.input :state, :collection => ['AndhraPradesh', 'Telangana'], :prompt =>'select' %>
+<%= f.input :country, :collection => ['india', 'brazil'] %>
+<%= f.input :zip %>
+<%= f.input :username %>
+<%= f.input :password %>
+<%= f.input :password_confirmation %>
+<%= f.input :paid_rank_id %>
+<%= f.button :submit, "submit"%>
+<% end %> 
