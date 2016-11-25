@@ -1,0 +1,40 @@
+<h1 align=center><strong>Profile</strong></h2>
+<p>
+<strong>First_Name:</strong>
+<%= @profile.first_name %>
+</p>
+<p>
+<strong>Gender:</strong>
+<%= @profile.gender %>
+</p>
+<p>
+<strong>Phone:</strong>
+<%= @profile.phone %>
+</p>
+<strong>Email_Id:</strong>
+<%= @profile.email %>
+</p>
+<p>
+<strong>Address:</strong>
+<%= @profile.address %>
+</p>
+<p>
+<p>
+<strong>HomeTown:</strong>
+<%= @profile.hometown %>
+</p>
+<p>
+<strong>Education:</strong>
+<%= @profile.education %>
+</p>
+<p>
+<strong>Story:</strong>
+<%= @profile.story %>
+</p>
+<p>
+<strong>Movies:</strong>
+<%= @profile.movies %>
+</p>
+<p>
+<%= button_to :AddContact, { :controller => :contacts, :action => "new",  }, :method => :get %>
+<%= button_to :ListOfContacts, { :controller => :contacts, :action => "index",  }, :method => :get %>

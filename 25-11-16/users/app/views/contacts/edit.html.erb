@@ -1,0 +1,14 @@
+<h2 align= center ><strong>Editing Contact</strong></h2>
+<%= simple_form_for @contact, method: :patch do |f| %>
+  <%= f.input :first_name %>
+  <%= f.input :last_name %>
+  <%= f.input :contact_type %>
+  <%= f.input :address1 %>
+  <%= f.input :address2 %>
+  <%= f.input :city %>
+  <%= f.input :phone_number %>
+  <%= f.input :state %>  
+  <%= f.input :birthday %>
+  <%= f.button :submit %>
+ <% end %>
+ <%= link_to 'Back', contact_path %>

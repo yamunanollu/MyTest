@@ -1,0 +1,60 @@
+<h2>Sign up</h2>
+<%resource.build_profile%>
+<%resource.build_address%>
+<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+	<%= f.error_notification %>
+	<div class="form-inputs">
+		<%= f.input :email, required: true, autofocus: true %>
+		<%= f.input :password, required: true %>
+		<%= f.input :password_confirmation, required: true %>  
+		<%= f.input :first_name, label: 'First_Name'%>
+		<%= f.input :middle_name %>
+		<%= f.input :last_name %>
+		<%= f.input :gender, :collection => ['Male','Female'], :as => :radio_buttons, lable:'Gender'%>
+		<%= f.input :preferred_language %>
+		<%= f.input :email %>
+		<%= f.input :other_email %>
+		<%= f.input :phone %>
+		<%= f.input :mobile %>
+		<%= f.input :rank_id %>
+		<%= f.input :username %>
+		<%= f.input :password %>
+		<%= f.input :password_confirmation %>
+		<%= f.input :paid_rank_id %>
+		<h2 align=center><strong>Profile </strong></h2>
+		<%= f.simple_fields_for  :profile do |i| %>
+			<%= i.input :first_name %>
+			<%= i.input :phone %>
+			<%= i.input :email %>
+			<%= i.input :last_name %>
+			<%= i.input :fax %>
+			<%= i.input :cell %>
+			<%= i.input :address %>
+			<%= i.input :rank_id %>
+			<%= i.input :gender, :collection => ['Male','Female'], :as => :radio_buttons, lable:'Gender'%>
+			<%= i.input :education %>
+			<%= i.input :hometown %>
+			<%= i.input :story %>
+			<%= i.input :movies %>
+			<%= i.input :phone_visibility %>
+			<%= i.input :email_visibility %>
+			<%= i.input :address_visibility %>
+			<%= i.input :other_emails %>
+		    <h2 align=center><strong>Address </strong></h2>
+		        <%= f.simple_fields_for  :address do |j| %>
+				<%= j.input :address1 %>
+				<%= j.input :address2 %>
+				<%= j.input :city %>
+				<%= j.input :state %>
+				<%= j.input :country, :collection => ['india', 'brazil'] %>
+				<%= j.input :zip %>
+				<%= j.input :fax %>			
+			<% end %>
+		<% end %>
+	</div>
+	<div class="form-actions">
+	    <%= f.button :submit, "Sign up" %>
+	</div>
+<% end %>
+
+<%= render "devise/shared/links" %>
